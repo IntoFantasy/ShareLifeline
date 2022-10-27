@@ -1,0 +1,70 @@
+.homepage{
+    background-color: transparent;
+    height:auto;
+    display: flex;
+    top: 50px;
+    position: absolute;
+    opacity: 0.9;
+    z-index: -100;
+}
+#homeBackground{
+    width: 80%;
+    position: center;
+    margin: 0 auto;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid skyblue;
+    z-index: -200;
+    /*opacity: 0.8;*/
+}
+.title-intro{
+    /* Layout Declarations */
+	/*margin-bottom: 0.1em;*/
+	/* Typography Declarations */
+    margin-top: 5%;
+    margin-left: 11%;
+	color: 	black;
+	font-family: "Rubik", sans-serif;
+	font-size: 250%;
+    position: absolute;
+    width: 100%;
+    text-align: -moz-left;
+    z-index: -100;
+    background-color: transparent;
+}
+.title-heading{
+    margin-top: 8.5%;
+	/* Typography Declarations */
+    width: 80%;
+    margin-left: 10% ;
+	color: black;
+	font-family: "Rubik", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 500%;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	text-shadow: 0px 3px 0px #000080;
+    position: absolute;
+    float:left;
+    text-align: center;
+    z-index: -100;
+    background-color: transparent;
+    border-radius: 20px;
+    /*opacity: 0.6;*/
+}
+.heading-container{
+
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 10% ;
+    width: 80%;
+    height: 50%;
+    background-color: skyblue;
+    z-index: -120;
+    border-radius: 20px;
+    opacity: 0.6;
+}
+::-webkit-scrollbar{
+    display: none;
+}
