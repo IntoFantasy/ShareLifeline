@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/homepage/style.css">
+  <link rel="stylesheet" href="static/homepage/style(LifeLine).css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+  This was created based on the Dribble shot by Deepak Yadav that you can find at https://goo.gl/XRALsw
+  I'm @hk95 on GitHub. Feel free to message me anytime.
+-->
+
+<section class="user">
+
+  <div class="loader-container">
+    <div class="loader">
+      <img src="static/homepage/LifeLine.png" alt="Lifeline">
+      <div class="slide-box">
+        <div class="solid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Don't have an account?</h2>
+        <p class="user_unregistered-text">Sign up for more information.</p>
+        <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+      </div>
+
+      <div class="user_options-registered">
+        <h2 class="user_registered-title">Have an account?</h2>
+        <p class="user_registered-text">Log in for more informmation.</p>
+        <button class="user_registered-login" id="login-button">Login</button>
+      </div>
+    </div>
+    
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-login">
+        <h2 class="forms_title">Login</h2>
+        <form class="forms_form" method="post" action="/login">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="email" id="emailLogin" name="emailLogin" placeholder="Email" class="forms_field-input" required autofocus />
+            </div>
+            <div class="forms_field">
+              <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+            <input type="button" value="Log In" class="forms_buttons-action" onclick="login()">
+          </div>
+        </form>
+      </div>
+      <div class="user_forms-signup">
+        <h2 class="forms_title">Sign Up</h2>
+        <form class="forms_form" method="post" action="/login">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" id="nameSignUp" name="nameSignUp" placeholder="Full Name" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="email" id="emailSignUp" name="emailSignUp" placeholder="Email" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="password" id="passwordSignUp" name="passwordSignUp" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Sign up" class="forms_buttons-action" onclick="login()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- partial -->
+  <script  src="static/homepage/script.js"></script>
+<script  src="static/homepage/script(LifeLine).js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShareLifeline</title>
+    <link rel="stylesheet" href="static/Question/banner.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/Question/style(LifeLine).css">
+    <link rel="stylesheet" href="static/Question/Question.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/Question/sideMenu.css">
+</head>
+<body>
+<div id="popLayer"></div>
+<div id="popBox">
+    <div class="query-title"></div>
+    <div class="query-close"><i class="fa-solid fa-x"></i></div>
+</div>
+<div id="root"></div>
+<div class="loader-container">
+    <div class="loader">
+        <img src="static/Question/LifeLine.png" alt="Lifeline">
+        <div class="slide-box">
+            <div class="solid"></div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="logo"><img src="static/Question/logo.png" alt=""></div>
+    <div class="index"><a href="http://127.0.0.1:9300/homepage">Home</a></div>
+    <div class="index" id="Community"><a href="http://127.0.0.1:9700/Question">Community</a></div>
+    <div class="index"><a href="">WaitForAnswer</a></div>
+    <div class="wrap">
+        <div class="search">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?" id="searchkey">
+            <button type="button" class="searchButton" onclick='Search1()'>
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <div class="query"><button type="button" onclick="query()">Query</button></div>
+</div>
+<div class="card-list">
+    <div class="card">Follow</div>
+    <div class="card" id="Question">Question</div>
+    <div class="card">Blog</div>
+</div>
+<div class="content-list">
+    <div class="content-item">
+        <div class="content-title"><a href="http://127.0.0.1:9700/FAQ">Where to buy new medicine</a></div>
+        <div class="content-read more_h">
+            <p>
+                I am sorry that I have to ask a favour of you, with the hope that you will be kind to help me.
+                I have been longing to apply for the entrance examination for MA candidates for a long time because I want to pursue advanced I find myself far from the required standard, especially my very poor English. At this moment, the personal friendship leads me to approach you with the request, whether you can manage to give me some constructive guidance. I promise to be a diligent student. If you agree, I will come to your house once a week at a time most convenient to you.
+                I'm afraid I can't go to school today. I've had a headache and a cough. I didn't sleep well last night. This morning I felt even worse, so I had to go to the hospital. The doctor told me to have a good rest, or it would get serious. So I would like to stay in bed for two days. I hope I will get well and go back to school as soon as possible. Thank you.
+            </p>
+        </div>
+        <div class="content-read copy">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <button class="more"></button>
+        <div class="user-operation">
+            <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+            <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+            <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+        </div>
+    </div>
+    <div class="content-item">
+        <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+        <div class="content-read more_h">
+            <p>
+                Triclosan (2,4,4′-trichloro-2′-hydroxydiphenylether, TCS) as well as the TCS containing slow-release product Microban Additive B have been widely used for decades as an antiseptic ingredient in construction and building materials, films, floor coverings, home furnishings, housewares, industrial products, miscellaneous coatings, personal care products and sport items at concentration levels of 0.1–1.0 w% [1,2] and as plastic additive at levels of 1–10 w% [3].
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <div class="content-read copy">
+            <p>
+                Triclosan (2,4,4′-trichloro-2′-hydroxydiphenylether, TCS) as well as the TCS containing slow-release product Microban Additive B have been widely used for decades as an antiseptic ingredient in construction and building materials, films, floor coverings, home furnishings, housewares, industrial products, miscellaneous coatings, personal care products and sport items at concentration levels of 0.1–1.0 w% [1,2] and as plastic additive at levels of 1–10 w% [3].
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <button class="more"></button>
+        <div class="user-operation">
+            <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+            <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+            <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+        </div>
+    </div>
+    <div class="content-item">
+        <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+        <div class="content-read more_h">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <div class="content-read copy">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <button class="more"></button>
+        <div class="user-operation">
+            <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+            <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+            <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+        </div>
+    </div>
+    <div class="content-item">
+        <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+        <div class="content-read more_h">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <div class="content-read copy">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <button class="more"></button>
+        <div class="user-operation">
+            <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+            <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+            <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+        </div>
+    </div>
+    <div class="content-item">
+        <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+        <div class="content-read more_h">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <div class="content-read copy">
+            <p>
+                The mixed culture TCSmix100 previously isolated and characterized, and able to completely mineralize TCS at stoichiometric chloride release, was investigated in presence or absence of solubilizers in lab-scale well stirred batch reactors.
+            </p>
+            <p>
+                While TCS conversion was limited in solubilizer-free tests due to limited solubility of TCS crystals within the aqueous phase, solubilizers enhanced water solubility, mass transport and microbial kinetics. Thus, TCS transformation rate at initial 1.45 g TCS L−1 was further increased from a high level of 155–172 mg L−1 d−1 without solubilizers to 399 mg L−1 d−1 or to 888 mg L−1 d-1 providing β-pinene or α-pinene as NAPs, i.e., by a factor of 2.3–5.2, exceeding kinetic parameters of other strains described in literature by at least two orders of magnitude. These results clearly demonstrate the high TCS mineralization capacity of this biphasic treatment technologies and its applicability in treatment of highly contaminated TCS point-sources to eliminate recalcitrant contaminants at high levels before getting diluted.
+            </p>
+        </div>
+        <button class="more"></button>
+        <div class="user-operation">
+            <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+            <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+            <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+        </div>
+    </div>
+</div>
+<div class="create-article">
+    <div class="create-article-title"><i class="fa fa-paint-brush"></i><p>Create</p></div>
+    <div class="create-article-draft">Drafts</div>
+    <div class="create-choice">
+        <div class="create-query"><a href="/Query"><div class="circle-wrap-query"><i class="fa fa-edit"></i></div></a><div class="create-name">
+            Query</div></div>
+        <div class="create-query"><a href="/BlogWrite"><div class="circle-wrap-blog"><i class="fa fa-blog"></i></div></a><div class="create-name">
+            Blog</div></div>
+        <div class="create-query"><a href=""><div class="circle-wrap-science"><i class="fa fa-atom"></i></div></a><div class="create-name">Answer</div></div>
+    </div>
+    <div class="create-slogan"> Start Creating!</div>
+    <img src="static/Question/img.png" alt="" class="img-slogan">
+    <button class="start-creating"><i class="fa fa-plus"></i> <a href="/BlogWrite">Write Down Your Story</a></button>
+</div>
+<div class="user-recommendation">
+    <div class="user-recommendation-title"><i class="fa-solid fa-users"></i> <p> Patients Like ME</p></div>
+    <div class="user-recommendation-list">
+        <div class="user-recommendation-item">
+            <div class="user-recommendation-portal"><img src="https://pic3.zhimg.com/80/v2-798a1d572955f1164ee0c07e4f5fa0aa_720w.webp" alt=""></div>
+            <div class="user-recommendation-intro">
+                <div class="user-recommendation-name">Akuya</div>
+                <div class="user-recommendation-tag">Depression Bloger</div>
+            </div>
+            <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+        </div>
+        <div class="user-recommendation-item">
+            <div class="user-recommendation-portal"><img src="https://pic3.zhimg.com/80/v2-68c683fe8204dd7887991d8d5e909e12_720w.webp" alt=""></div>
+            <div class="user-recommendation-intro">
+                <div class="user-recommendation-name">Liya</div>
+                <div class="user-recommendation-tag">Heart professor</div>
+            </div>
+            <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+        </div>
+        <div class="user-recommendation-item">
+            <div class="user-recommendation-portal"><img src="https://pic1.zhimg.com/80/v2-b9252f4411ad9dcc3616bba99897a004_720w.webp" alt=""></div>
+            <div class="user-recommendation-intro">
+                <div class="user-recommendation-name">Diassy</div>
+                <div class="user-recommendation-tag">Love Singer</div>
+            </div>
+            <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+        </div>
+        <div class="user-recommendation-item">
+            <div class="user-recommendation-portal"><img src="https://pic2.zhimg.com/80/v2-da6a3d112b58c8247fd8c0f58c236871_720w.webp" alt=""></div>
+            <div class="user-recommendation-intro">
+                <div class="user-recommendation-name">LexSama</div>
+                <div class="user-recommendation-tag">Guest</div>
+            </div>
+            <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+        </div>
+        <div class="user-recommendation-item">
+            <div class="user-recommendation-portal"><img src="https://pic2.zhimg.com/80/v2-23049f9e8e01e1955cd5af5bc855b661_720w.webp" alt=""></div>
+            <div class="user-recommendation-intro">
+                <div class="user-recommendation-name">Segas</div>
+                <div class="user-recommendation-tag">Sleep sleep...</div>
+            </div>
+            <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function Search1(){
+        var x = document.getElementById("searchkey").value
+        window.location.href="http://127.0.0.1:9500/searchResult?key=" + x;
+    }
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script  src="static/Question/script(LifeLine).js"></script>
+<script  src="static/Question/more.js"></script>
+<script  src="static/Question/popLayer.js"></script>
+<script src='https://unpkg.com/react@17/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom@17/umd/react-dom.development.js'></script>
+<script src='https://unpkg.com/@types/react@17.0.44/index.d.ts'></script>
+<script src='https://unpkg.com/@types/react-dom@17.0.15/index.d.ts'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/classnames/2.3.1/index.min.js'></script>
+<script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script>
+<script  src="static/Question/sideMenu.js"></script>
+</html>

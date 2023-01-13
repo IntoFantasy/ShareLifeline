@@ -1,0 +1,335 @@
+#Question{
+    color: #1E90FF;
+}
+.content-list{
+    position: relative;
+    width: 45%;
+    margin: 0 auto 0 20%;
+    border: 1px solid #ccc;
+    top: 80px;
+    background-color: white;
+    float: left;
+    z-index: -1000;
+}
+.content-item{
+    float: left;
+    position: relative;
+    width: 100%;
+    font-family: Ebrima;
+    box-shadow: 0 -1px #cccccc inset;
+}
+.content-title{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 130%;
+    font-weight: bolder;
+}
+.content-title a{
+    text-decoration: none;
+    color: black;
+}
+.content-title a:hover{
+    color: #1E90FF;
+}
+.content-read{
+    margin-left: 20px;
+}
+.content-read p{
+    text-indent: 2em;
+
+}
+.copy{
+    display: none;
+}
+.more{
+    width: 80px;
+    margin-left: 80%;
+    border: none;
+    background-color: transparent;
+    color: #1E90FF;
+}
+.like-give{
+    scale: 120%;
+}
+.like-give:hover{
+    color: #1E90FF;
+}
+.give-like-click{
+    color: red;
+}
+.give-like-click:hover{
+    color: red;
+}
+.user-operation{
+    display: flex;
+    height: 30px;
+    font-family: Ebrima;
+    margin-bottom: 10px;
+}
+.give-like{
+    float: left;
+    width: 50px;
+    margin-left: 20px;
+    font-family: Ebrima;
+    color: #cccccc;
+}
+.give-collection{
+    float: left;
+    width: 100px;
+    margin-left: 20px;
+    font-family: Ebrima;
+    color: #cccccc;
+}
+.give-comment{
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+    font-family: Ebrima;
+    color: #cccccc;
+}
+.comment-give{
+    scale: 120%;
+}
+.collection-give{
+    scale: 120%;
+}
+.collection-give-click{
+    color: #FFD700;
+}
+.collection-give:hover{
+    color: #1E90FF;
+}
+.collection-give-click:hover{
+    color: #FFD700;
+}
+.create-article{
+    z-index: -1000;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    top: 28px;
+    width: 250px;
+    height: 320px;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+.create-article-title{
+    position: relative;
+    margin: 10px;
+}
+.create-article-title i{
+    position: relative;
+    float: left;
+    width: 20px;
+    top: 3px;
+    scale: 90%;
+}
+.create-article-title p{
+    width: 100px;
+    font-family: Ebrima;
+    float: left;
+}
+.create-article-draft{
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-family: Ebrima;
+    font-size: 50%;
+}
+.create-choice{
+    float: left;
+    display: flex;
+    width: 100%;
+}
+.create-query{
+    position: relative;
+    top: 40px;
+    width: 35%;
+    height: 50px;
+}
+.circle-wrap-query{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fef9e2;
+}
+.circle-wrap-query:hover{
+    background-color: #fcefb5;
+}
+.circle-wrap-query i{
+    position: relative;
+    margin-left: 38%;
+    top: 33%;
+    scale: 180%;
+    color: #f4c807;
+}
+.circle-wrap-blog{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e1edff;
+}
+.circle-wrap-blog:hover{
+    background-color: #b3d1ff;
+}
+.circle-wrap-blog i{
+    position: relative;
+    margin-left: 38%;
+    top: 33%;
+    scale: 180%;
+    color: DodgerBlue;
+}
+
+.circle-wrap-science{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff3e2;
+}
+.circle-wrap-science:hover{
+    background-color: #ffe0b5;
+}
+.circle-wrap-science i{
+    position: relative;
+    margin-left: 38%;
+    top: 33%;
+    scale: 160%;
+    color: #ffad3e;
+}
+.create-name{
+    margin-top: 5px;
+    text-align: center;
+    font-family: Ebrima;
+    font-size: 80%;
+}
+.create-slogan{
+    float: left;
+    position: relative;
+    width: 50%;
+    margin-left: 10px;
+    top: 30%;
+    font-size: 150%;
+}
+.img-slogan{
+    float: left;
+    width: 30%;
+    position: relative;
+    margin-top: 40%;
+}
+.start-creating{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 10%;
+    float: left;
+    border: 1px solid #1E90FF;
+    border-radius: 5%;
+    text-align: center;
+    font-family: Ebrima;
+    color: #1E90FF;
+    background-color: white;
+}
+.start-creating a{
+    text-decoration: none;
+    color: #1E90FF;
+}
+.user-recommendation{
+    z-index: -1000;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    margin-top: 40px;
+    width: 250px;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+.user-recommendation-title{
+    position: relative;
+    margin: 10px;
+}
+.user-recommendation-title i{
+    position: relative;
+    float: left;
+    width: 20px;
+    top: 3px;
+    scale: 90%;
+}
+.user-recommendation-title p{
+    width: 150px;
+    font-family: Ebrima;
+    float: left;
+    color: black;
+}
+.user-recommendation-list{
+    margin-top: 60px;
+    display: grid;
+}
+.user-recommendation-item{
+    width: 100%;
+    margin: 10px;
+
+}
+.user-recommendation-portal img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 5%;
+    border: 2px solid #ffad3e;
+}
+.user-recommendation-intro{
+    float: left;
+    height: 50px;
+}
+.user-recommendation-name{
+    width: 100px;
+    margin-left: 10px;
+    box-shadow: 0 -1px #cccccc inset;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user-recommendation-tag{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 80%;
+    font-family: Ebrima;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.user-recommendation-follow{
+    position: relative;
+    height: 100%;
+    float: left;
+}
+.user-recommendation-follow i{
+    margin-left: 5px;
+    float: left;
+    position: relative;
+    margin-top: 12px;
+    scale: 90%;
+    color: #1E90FF;
+}
+.user-recommendation-follow p{
+    float: left;
+    margin-left: 2px;
+    font-family: Ebrima;
+    position: relative;
+    margin-top: 8px;
+    scale: 90%;
+    color: #1E90FF;
+}
+.unfollow p {
+    color: #cccccc;
+}
+.unfollow i{
+    scale: 90%;
+    color: #cccccc;
+}
+.create-query a{
+    text-decoration: none;
+    color: black;
+}

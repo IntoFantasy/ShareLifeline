@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PatientsProfile</title>
+  <script src="https://use.typekit.net/lkh0ago.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    </script><script  src="./script1.js"></script>
+  <link rel="stylesheet" href="./static/homepage/homepagestyle.css">
+  <link href="./static/homepage/kico.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id='settings' ontouchstart style="-ms-flex: 0 0 75%;flex: 0 0 75%;max-width: 75%;background:silver;overflow: scroll;">
+  <input checked class='nav' name='nav' type='radio'>
+  <span class='nav'>Information</span>
+  <input class='nav' name='nav' type='radio'>
+  <span class='nav'>Tags and Friends</span>
+  <input class='nav' name='nav' type='radio'>
+  <span class='nav'>Posts</span>
+  <input class='nav' name='nav' type='radio'>
+  <span class='nav'>History</span>
+ <main class="content">
+ <!-- <main style="-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;">--> 
+      <section id="info" style="background-image:url(static/homepage/img/2.png);height:100%;background-attachment: fixed;overflow: scroll;">
+        <div class="wrap">
+            <h2 class="title">Information</h2>
+            <div class="row">
+                <div class="col-l-4">
+                  <img src={{.Photo}} title="Jie Ge" style="border-radius: 100px;width: 200px;height: auto;">
+                </div>
+                <div class="col-l-4">
+                  <br>
+                    <p class="article3">Name: {{.Name}}</p>
+                    <p class="article3">Sex: {{.Sex}}</p>
+                    <p class="article3">Phone: {{.Age}}</p>
+                </div>
+                <div class="col-l-4">
+                  <br>
+                    <p class="article3">Birthday: {{.Birthday}}</p>
+                    <p class="article3">Address: {{.Address}}</p>
+                    <p class="article3">Email: <a href="mailto:zhangsan@sjtu.edu.cn">{{.Email}}</a></p>
+                </div>
+                <div class="col-l-5" style="margin-left: 400px;margin-top:30px">
+                    <p  style="bottom: 38px;padding: 0px;font-size:x-large ;">Self-introduction:</p>
+                    <p class="article3" >{{.Introduction}}</p>
+                </div>
+            </div>
+            <script>
+                function change(){
+                    window.location.href="./change"
+                }
+            </script>
+            <button type="button" value="btn" onclick=javascript:change()>
+                Change Information
+            </button>
+        </div>
+      </section>
+    <section id='labels' style="background-image:url(static/homepage/img/2.png);height:100%;background-attachment: fixed;overflow: scroll;">
+      <div class="wrap">
+        <h2 class="title">Personal Tags</h2>
+        <div class="row" style="margin-top: 50px;" id="LoveID">
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <h2 class="title">My Friends</h2>
+        <div class="row">
+          <div class="col-l-3" style="margin-bottom: 20px;">
+            <div class="avater">
+              <img src="static/homepage/img/awei.png" class="photo" title="A Wei"/>
+              <p class="name"><a href="www.baidu.com">A Wei</a></p>
+            </div>
+            
+          </div> 
+          <div class="col-l-3" style="margin-bottom: 20px;">
+            <div class="avater" >
+              <img src="static/homepage/img/binbin.png" class="photo" title="Bin Bin"/>
+              <p class="name"><a href="www.baidu.com">Bin Bin</a></p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    </section>
+    <section id='articles' style="background-image:url(static/homepage/img/3.png);height:100%;background-attachment: fixed;overflow: scroll;">
+      <div class="wrap">
+        <h2 class="title">My Posts</h2>
+        <div class="row">
+            <div class="col-l-12" style="margin-bottom: 20px;">
+                <p class="article1"><a href="www.sjtu.edu.cn">Why insomnia leads to headache</a></p>
+                <div class="row">
+                    <div class="col-l-2">
+                        <img src="static/homepage/img/toutong.png">
+                    </div>
+                    <div class="col-l-10">
+                        <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                            There are several different situations of headache caused by insomnia: 1. The non-specific headache and dizziness caused by short-term insomnia are due to the fact that insomnia makes the brain and body unable to rest and relax, leading to······
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-l-12" style="margin-bottom: 20px;">
+                <p class="article1"><a href="www.baidu.com">What should I do if I catch a cold</a></p>
+                <div class="row">
+                    <div class="col-l-2">
+                        <img src="static/homepage/img/ganmao.png">
+                    </div>
+                    <div class="col-l-10">
+                        <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                            After the patient has a cold, he/she should first pay attention to rest, stop smoking and drinking, drink more warm water, speed up the metabolism of the body, use Antelope Cold Tablet or Shuanghuanglian Oral Liquid to fight the virus, and use Poganmin Granule to relieve symptoms······
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-l-12" style="margin-bottom: 20px;">
+                <p class="article1"><a href="https://jhc.sjtu.edu.cn/public/courses/CS2612/">Prevention and treatment of COVID-19</a></p>
+                <div class="row">
+                    <div class="col-l-2">
+                        <img src="static/homepage/img/xinguan.png">
+                    </div>
+                    <div class="col-l-10">
+                        <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                            To prevent novel coronavirus pneumonia, first of all, avoid contact with the virus. A patient should try to stay at home and not go out. If you need to go out, you can wear disposable gloves and masks. If you can, the masks should be as small as four······
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section id='history' style="background-image:url(static/homepage/img/2.png);height:100%;background-attachment: fixed;overflow: scroll;">
+        <div class="wrap">
+            <h2 class="title">History</h2>
+            <div class="row">
+                <div class="col-l-12" style="margin-bottom: 20px;">
+                    <p class="article1"><a href="www.sjtu.edu.cn">Why insomnia leads to headache</a></p>
+                    <div class="row">
+                        <div class="col-l-2">
+                            <img src="static/homepage/img/toutong.png">
+                        </div>
+                        <div class="col-l-10">
+                            <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                                There are several different situations of headache caused by insomnia: 1. The non-specific headache and dizziness caused by short-term insomnia are due to the fact that insomnia makes the brain and body unable to rest and relax, leading to······
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-l-12" style="margin-bottom: 20px;">
+                    <p class="article1"><a href="www.baidu.com">What should I do if I catch a cold</a></p>
+                    <div class="row">
+                        <div class="col-l-2">
+                            <img src="static/homepage/img/ganmao.png">
+                        </div>
+                        <div class="col-l-10">
+                            <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                                After the patient has a cold, he/she should first pay attention to rest, stop smoking and drinking, drink more warm water, speed up the metabolism of the body, use Antelope Cold Tablet or Shuanghuanglian Oral Liquid to fight the virus, and use Poganmin Granule to relieve symptoms······
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-l-12" style="margin-bottom: 20px;">
+                    <p class="article1"><a href="https://jhc.sjtu.edu.cn/public/courses/CS2612/">Prevention and treatment of COVID-19</a></p>
+                    <div class="row">
+                        <div class="col-l-2">
+                            <img src="static/homepage/img/xinguan.png">
+                        </div>
+                        <div class="col-l-10">
+                            <p class="article2" style="position: absolute;right: 0px;padding: 0px;">
+                                To prevent novel coronavirus pneumonia, first of all, avoid contact with the virus. A patient should try to stay at home and not go out. If you need to go out, you can wear disposable gloves and masks. If you can, the masks should be as small as four······
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+  </main>
+</div>
+<!-- partial -->
+
+
+</body>
+<script >
+    var tags = {{.Labels}};
+    var taginfo = "";
+    for (let i=0; i<tags.length; i++){
+        taginfo += "<div class=\"col-l-3\">" + "<div class=\"label_icon\">" + "<p style=\"text-align: center;\">" + label + "</p>" + "</div>" + "</div>";
+    };
+    console.log(taginfo)
+    document.getElementById("Taginfo").innerHTML = taginfo;
+</script>
+<script>
+    // 自定义字符串,用于拼接标签
+    var loveStr = "";
+
+    // 自定义数组
+    var loveArr = {{.Labels}};
+
+    /****普通for循环****/
+    for (let i = 0; i < loveArr.length; i++) {
+        loveStr += "<div class='col-l-3'><div style='border-bottom: 4px solid grey; style='text-align: center;'> <p style='text-align: center;'>" + loveArr[i] + "</p>" + "</div>" + "</div>";
+        if (i%4 == 3){
+            loveStr += "<hr>";
+        };
+    };
+    console.log(loveStr);
+    console.log(loveArr.length);
+    // 拼接完字符串数组后用innerHTML把它渲染到页面中
+    document.getElementById("LoveID").innerHTML = loveStr;
+</script>
+</html>

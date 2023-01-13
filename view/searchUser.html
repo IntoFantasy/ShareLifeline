@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+  <style>
+    .banner{
+      position: fixed;
+      width: 100%;
+      height: 65px;
+      margin: 0 auto;
+      background-color: white;
+      display: flex;
+      box-shadow:0 1px #ccc;
+      top: 0;
+    }
+    .logo img{
+      width: 100%;
+    }
+    .logo{
+      padding-left: 10%;
+      margin-right: -5%;
+      margin-top: 10px;
+      width: 30%;
+    }
+    .index{
+      padding: 20px;
+      margin-top: 5px;
+    }
+    .index a{
+      text-decoration: none;
+      font-family: Ebrima;
+      color: #ccc;
+      font-weight: bolder;
+      font-size: 130%;
+    }
+    .index a:hover{
+      color: black;
+    }
+    .search {
+      width: 100%;
+      position: relative;
+      display: flex;
+    }
+
+    .searchTerm {
+      width: 100%;
+      border: 3px solid #00BFFF;
+      border-right: none;
+      padding: 5px;
+      height: 20px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      color: #9DBFAF;
+    }
+
+    .searchTerm:focus{
+      color: #00B4CC;
+    }
+
+    .searchButton {
+      width: 40px;
+      height: 36px;
+      border: 1px solid #1E90FF;
+      background: #1E90FF;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .wrap{
+      width: 20%;
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+    .query button{
+      margin-top: 20px;
+      margin-left: 30px;
+      width: 70%;
+      height: 50%;
+      color: white;
+      background-color: #1E90FF;
+      border: none;
+      border-radius: 15px;
+    }
+    /*#Community{*/
+    /*    box-shadow:0 -5px #1E90FF inset;*/
+    /*}*/
+    /*#Community a{*/
+    /*    color:  #1E90FF;*/
+    /*}*/
+    .card-list{
+      width: 45%;
+      height: 50px;
+      display: flex;
+      margin-left: 20%;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      position: relative;
+      top: 80px;
+      z-index: -1000;
+    }
+    .card-list .card{
+      margin: 20px;
+      font-family: Ebrima;
+      position: relative;
+      bottom: 8px;
+      font-weight: lighter;
+      font-size: 120%;
+    }
+    .card-list .card:hover{
+      color: mediumblue;
+    }
+
+  </style>
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .loader-container {
+      /*width: 100%;*/
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Recursive';
+      z-index: -2000;
+      position: fixed;
+    }
+
+    .loader{
+      width: 100%;
+      position: relative;
+    }
+
+    .loader img {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slide-box {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      height: 100%;
+    }
+
+    .solid {
+      width: 100%;
+      background-color: white;
+    }
+
+    .heading {
+      display: flex;
+      align-items: baseline;
+      margin-top: 30px;
+    }
+
+    .dot {
+      border-radius: 50%;
+      background-color: black;
+      margin-left: 10px;
+    }
+
+    #d1 {
+      width: 11px;
+      height: 11px;
+    }
+
+    #d2 {
+      width: 10px;
+      height: 10px;
+    }
+
+    #d3 {
+      width: 9px;
+      height: 9px;
+    }
+  </style>
+  <style>
+    #Question{
+      color: black;
+    }
+    .content-list{
+      position: relative;
+      width: 45%;
+      margin: 3% auto 0 20%;
+      border: 1px solid #ccc;
+      top: 80px;
+      background-color: white;
+      float: left;
+      z-index: -200;
+    }
+    .content-item{
+      float: left;
+      position: relative;
+      width: 100%;
+      font-family: Ebrima;
+      box-shadow: 0 -1px #cccccc inset;
+    }
+    .content-title{
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 130%;
+      font-weight: bolder;
+    }
+    .content-title a{
+      text-decoration: none;
+    }
+    .content-title a:hover{
+      color: #1E90FF;
+    }
+    .content-read{
+      margin-left: 20px;
+    }
+    .content-read p{
+      text-indent: 2em;
+
+    }
+    .copy{
+      display: none;
+    }
+    .more{
+      width: 80px;
+      margin-left: 80%;
+      border: none;
+      background-color: transparent;
+      color: #1E90FF;
+    }
+    .like-give{
+      scale: 120%;
+    }
+    .like-give:hover{
+      color: #1E90FF;
+    }
+    .give-like-click{
+      color: red;
+    }
+    .give-like-click:hover{
+      color: red;
+    }
+    .user-operation{
+      display: flex;
+      height: 30px;
+      font-family: Ebrima;
+      margin-bottom: 10px;
+    }
+    .give-like{
+      float: left;
+      width: 50px;
+      margin-left: 20px;
+      font-family: Ebrima;
+      color: #cccccc;
+    }
+    .give-collection{
+      float: left;
+      width: 100px;
+      margin-left: 20px;
+      font-family: Ebrima;
+      color: #cccccc;
+    }
+    .collection-give{
+      scale: 120%;
+    }
+    .collection-give-click{
+      color: #FFD700;
+    }
+    .collection-give:hover{
+      color: #1E90FF;
+    }
+    .collection-give-click:hover{
+      color: #FFD700;
+    }
+    .create-article{
+      z-index: -1000;
+      float: left;
+      left: 66%;
+      position: fixed;
+      top: 85px;
+      width: 15%;
+      height: 300px;
+      border: 1px solid #cccccc;
+      background-color: white;
+    }
+    .create-article-title{
+      position: relative;
+      margin: 10px;
+    }
+    .create-article-title i{
+      position: relative;
+      float: left;
+      width: 20px;
+      top: 3px;
+      scale: 90%;
+    }
+    .create-article-title p{
+      width: 100px;
+      font-family: Ebrima;
+      float: left;
+    }
+    .create-article-draft{
+      float: right;
+      margin-right: 10px;
+      margin-top: 5px;
+      font-family: Ebrima;
+      font-size: 50%;
+    }
+    .create-choice{
+      float: left;
+      display: flex;
+      width: 100%;
+    }
+    .create-query{
+      position: relative;
+      top: 40px;
+      width: 35%;
+      height: 50px;
+    }
+    .circle-wrap-query{
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fef9e2;
+    }
+    .circle-wrap-query:hover{
+      background-color: #fcefb5;
+    }
+    .circle-wrap-query i{
+      position: relative;
+      margin-left: 38%;
+      top: 33%;
+      scale: 180%;
+      color: #f4c807;
+    }
+    .circle-wrap-blog{
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e1edff;
+    }
+    .circle-wrap-blog:hover{
+      background-color: #b3d1ff;
+    }
+    .circle-wrap-blog i{
+      position: relative;
+      margin-left: 38%;
+      top: 33%;
+      scale: 180%;
+      color: DodgerBlue;
+    }
+
+    .circle-wrap-science{
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff3e2;
+    }
+    .circle-wrap-science:hover{
+      background-color: #ffe0b5;
+    }
+    .circle-wrap-science i{
+      position: relative;
+      margin-left: 38%;
+      top: 33%;
+      scale: 160%;
+      color: #ffad3e;
+    }
+    .create-name{
+      margin-top: 5px;
+      text-align: center;
+      font-family: Ebrima;
+      font-size: 80%;
+    }
+    .create-slogan{
+      float: left;
+      position: relative;
+      width: 50%;
+      margin-left: 10px;
+      top: 30%;
+      font-size: 150%;
+    }
+    .img-slogan{
+      float: left;
+      width: 30%;
+      position: relative;
+      margin-top: 40%;
+    }
+    .start-creating{
+      margin-top: 5%;
+      margin-left: 5%;
+      width: 90%;
+      height: 10%;
+      float: left;
+      border: 1px solid #1E90FF;
+      border-radius: 5%;
+      text-align: center;
+      font-family: Ebrima;
+      color: #1E90FF;
+    }
+
+
+  </style>
+  <style>
+    .search-card-list{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      border: 1px solid #ccc;
+      position: fixed;
+      top: 65px;
+      background-color: white;
+    }
+    .search-card-container{
+      display: flex;
+      width: 30%;
+      margin-left: 20%;
+    }
+    .search-card-container .card{
+      position: relative;
+      font-size: 95%;
+      font-family: Ebrima;
+      height: 78%;
+      width: 25%;
+      margin: 10px 20px 0;
+    }
+    .search-card-list a{
+      text-decoration: none;
+      color: black;
+    }
+    .more{
+      margin-bottom: 10px;
+    }
+    #Knowledge{
+      font-weight: bolder;
+      box-shadow: 0 -5px  #1E90FF inset;;
+    }
+    .hot-search{
+      z-index: -1000;
+      float: left;
+      left: 66%;
+      position: fixed;
+      margin-top: 8%;
+      width: 20%;
+      height: 250px;
+      border: 1px solid #cccccc;
+      background-color: white;
+    }
+    .hot-search-item svg{
+      width: 18px;
+      height: 18px;
+      scale: 100%;
+    }
+    .hot-search-title{
+      width: 100%;
+      height: 10px;
+      font-family: Ebrima;
+      font-weight: bolder;
+      margin: 10px 10px 20px;
+    }
+    /*.hot-search-item span{*/
+    /*    width: 80%;*/
+    /*    text-overflow: fade;*/
+    /*}*/
+    .hot-search-span{
+      max-width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .hot-search-item{
+      width: 100%;
+      margin: 3px 10px 5px;
+      font-family: Ebrima;
+    }
+    .hot-search-item:hover{
+      color: #1E90FF;
+    }
+  </style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="logo"><img src="https://s2.loli.net/2023/01/12/iL5JQlYsnWFUR6q.png" alt=""></div>
+  <div class="index"><a href="http://127.0.0.1:9300/homepage">Home</a></div>
+  <div class="index" id="Community"><a href="http://127.0.0.1:9700/Question">Community</a></div>
+  <div class="index"><a href="">WaitForAnswer</a></div>
+
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?" id="searchkey">
+      <button type="button" class="searchButton" onclick='Search1()'>
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div class="query"><button type="button">Query</button></div>
+</div>
+<div class="search-card-list">
+  <div class="search-card-container">
+  <div class="card" id="User" onclick="know()">Knowledge</div>
+  <div class="card" id="Question" onclick="question()">Question</div>
+    <div class="card" id="Blog" onclick="blog()">Blog</div>
+    <div class="card" id="Knowledge" onclick="user1()">User</div>
+  </div>
+</div>
+<div class="content-list" id="knowledge_text">
+  <div class="content-item">
+  </div>
+</div>
+  <div class="loader-container">
+    <div class="loader">
+      <img src="static/search/LifeLine.png" alt="Lifeline">
+      <div class="slide-box">
+        <div class="solid"></div>
+      </div>
+    </div>
+  </div>
+<div class="hot-search">
+  <div class="hot-search-title">HOT SEARCH</div>
+    <div class="hot-search-list">
+      <div class="hot-search-item"><span>Enhanced triclosan biodegradation</span> <svg t="1673433113776" class="icon" viewBox="0 0 1024 1024"  p-id="2695"><path d="M536.2112 0c27.362133 49.8048 44.4416 116.8768 44.4416 191.125333 0 153.2928-71.7184 277.597867-160.247467 277.597867-68.992 0-127.291733-76.002133-149.870933-181.994667C190.372267 399.940267 122.856533 534.045867 122.856533 666.773333 122.856533 864.0768 297.098667 1024 511.9808 1024c214.920533 0 389.162667-159.9232 389.162667-357.226667C901.1392 308.3776 550.5216 11.968 536.2112 0L536.2112 0zM515.197867 938.615467c-131.0976 0-170.218667-101.508267-163.464533-142.446933 13.4656-81.582933 94.0288-94.894933 154.88-94.894933 144.8192 0 203.1232-150.754133 206.5664-189.8368C713.175467 511.4368 765.314133 938.615467 515.197867 938.615467L515.197867 938.615467z" fill="#EE7E2E" p-id="2696"></path></svg></div>
+      <div class="hot-search-item"><span>a biphasic bioreactor</span> <svg t="1673433113776" class="icon" viewBox="0 0 1024 1024"  p-id="2695"><path d="M536.2112 0c27.362133 49.8048 44.4416 116.8768 44.4416 191.125333 0 153.2928-71.7184 277.597867-160.247467 277.597867-68.992 0-127.291733-76.002133-149.870933-181.994667C190.372267 399.940267 122.856533 534.045867 122.856533 666.773333 122.856533 864.0768 297.098667 1024 511.9808 1024c214.920533 0 389.162667-159.9232 389.162667-357.226667C901.1392 308.3776 550.5216 11.968 536.2112 0L536.2112 0zM515.197867 938.615467c-131.0976 0-170.218667-101.508267-163.464533-142.446933 13.4656-81.582933 94.0288-94.894933 154.88-94.894933 144.8192 0 203.1232-150.754133 206.5664-189.8368C713.175467 511.4368 765.314133 938.615467 515.197867 938.615467L515.197867 938.615467z" fill="#EE7E2E" p-id="2696"></path></svg></div>
+      <div class="hot-search-item"><span>mixed culture</span> <svg t="1673433113776" class="icon" viewBox="0 0 1024 1024"  p-id="2695"><path d="M536.2112 0c27.362133 49.8048 44.4416 116.8768 44.4416 191.125333 0 153.2928-71.7184 277.597867-160.247467 277.597867-68.992 0-127.291733-76.002133-149.870933-181.994667C190.372267 399.940267 122.856533 534.045867 122.856533 666.773333 122.856533 864.0768 297.098667 1024 511.9808 1024c214.920533 0 389.162667-159.9232 389.162667-357.226667C901.1392 308.3776 550.5216 11.968 536.2112 0L536.2112 0zM515.197867 938.615467c-131.0976 0-170.218667-101.508267-163.464533-142.446933 13.4656-81.582933 94.0288-94.894933 154.88-94.894933 144.8192 0 203.1232-150.754133 206.5664-189.8368C713.175467 511.4368 765.314133 938.615467 515.197867 938.615467L515.197867 938.615467z" fill="#EE7E2E" p-id="2696"></path></svg></div>
+      <div class="hot-search-item"><span>a biphasic bioreactor</span> <svg t="1673433113776" class="icon" viewBox="0 0 1024 1024"  p-id="2695"><path d="M536.2112 0c27.362133 49.8048 44.4416 116.8768 44.4416 191.125333 0 153.2928-71.7184 277.597867-160.247467 277.597867-68.992 0-127.291733-76.002133-149.870933-181.994667C190.372267 399.940267 122.856533 534.045867 122.856533 666.773333 122.856533 864.0768 297.098667 1024 511.9808 1024c214.920533 0 389.162667-159.9232 389.162667-357.226667C901.1392 308.3776 550.5216 11.968 536.2112 0L536.2112 0zM515.197867 938.615467c-131.0976 0-170.218667-101.508267-163.464533-142.446933 13.4656-81.582933 94.0288-94.894933 154.88-94.894933 144.8192 0 203.1232-150.754133 206.5664-189.8368C713.175467 511.4368 765.314133 938.615467 515.197867 938.615467L515.197867 938.615467z" fill="#EE7E2E" p-id="2696"></path></svg></div>
+      <div class="hot-search-item"><span class="hot-search-span">biphasic treatment technologies </span> <svg t="1673433113776" class="icon" viewBox="0 0 1024 1024"  p-id="2695"><path d="M536.2112 0c27.362133 49.8048 44.4416 116.8768 44.4416 191.125333 0 153.2928-71.7184 277.597867-160.247467 277.597867-68.992 0-127.291733-76.002133-149.870933-181.994667C190.372267 399.940267 122.856533 534.045867 122.856533 666.773333 122.856533 864.0768 297.098667 1024 511.9808 1024c214.920533 0 389.162667-159.9232 389.162667-357.226667C901.1392 308.3776 550.5216 11.968 536.2112 0L536.2112 0zM515.197867 938.615467c-131.0976 0-170.218667-101.508267-163.464533-142.446933 13.4656-81.582933 94.0288-94.894933 154.88-94.894933 144.8192 0 203.1232-150.754133 206.5664-189.8368C713.175467 511.4368 765.314133 938.615467 515.197867 938.615467L515.197867 938.615467z" fill="#EE7E2E" p-id="2696"></path></svg></div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  var knowledge = "";
+  var knowledgearr = {{.Users}};
+  for (let i=0; i<knowledgearr.length; i++){
+    // var link1 = "http://127.0.0.1:9400/" + knowledgearr[i]["Kind"] + "/" + knowledgearr[i]["Idx"]
+    knowledge += "<div class='content-item'><div class='content-title'><a href='' target='_blank'>"
+            + "Name: " + knowledgearr[i]["Name"] + "</a></div>"
+            + "<div class='content-read more_h'><p>"
+            +  "Email: " + knowledgearr[i]["Email"]
+            + "</p></div><div class='content-read copy'><p>"
+            + "Email: " + knowledgearr[i]["Email"]
+            + "</p></div><button class='more'></button></div>";
+  };
+  document.getElementById("knowledge_text").innerHTML = knowledge;
+</script>
+<script>
+  function question(){
+    var x = window.location.search;
+    window.location.href = "http://127.0.0.1:9500/searchquestion" + x;
+  }
+</script>
+<script>
+  function Search1(){
+    var x = document.getElementById("searchkey").value
+
+    // $.ajax({
+    //   type: "POST",
+    //   dataType:"json",
+    //   url: "http://127.0.0.1:9500/searchResult/key=" + $("[name=searchkey]").val(),
+    //   data:{
+    //     key: $("[name=searchkey]").val(),
+    //   },
+    //   success: function (){
+        window.location.href="http://127.0.0.1:9500/searchResult?key=" + x;
+      // }
+    // })
+  }
+</script>
+<script>
+  function know(){
+    var x = window.location.search;
+    window.location.href = "http://127.0.0.1:9500/searchResult" + x;
+  }
+</script>
+<script>
+  function blog(){
+    var x = window.location.search;
+    window.location.href = "http://127.0.0.1:9500/searchblog" + x;
+  }
+</script>
+<script>
+  function user1(){
+    var x = window.location.search;
+    window.location.href = "http://127.0.0.1:9500/searchuser" + x;
+  }
+</script>
+<script>
+  let slideBox = document.querySelector('.slide-box');
+  let solid = document.querySelector('.solid');
+
+  let width = 100;
+
+  let slide = setInterval(() => {
+    solid.style.width = `${width}%`;
+    width -= 1;
+  }, 20)
+
+  setTimeout(() => {
+    clearInterval(slide);
+    solid.style.width = `100%`;
+  }, 2050);
+
+  setInterval(() => {
+
+    width = 100;
+    let slide = setInterval(() => {
+      solid.style.width = `${width}%`;
+      width -= 1;
+    }, 20)
+
+    setTimeout(() => {
+      clearInterval(slide);
+    }, 2050);
+
+  }, 2050);
+</script>
+<script>
+  $(function(){
+    var content = $(".more_h").html();
+    var more = true;
+    //限制字符个数
+    var hide = function (){
+      $(".more_h").each(function(){
+        var maxheight=320;
+        if($(this).text().length>maxheight){
+          $(this).text($(this).text().substring(0,maxheight));
+          $(this).html($(this).html()+'...');
+          more = true;
+          $('.more').html("MORE  <i class=\"fa fa-angle-down\"></i>");
+        }else{
+          $(this).next().next().hide();
+        }
+      });
+    };
+    hide();
+    $('.more').click(function(){
+      if(more){
+        // $(this).prev().html(content);
+        var new_content = $(this).prev().html();
+        $(this).prev().prev().html(new_content);
+        // $(".more_h").html(content);
+        $(this).html("FOLD  <i class=\"fa fa-angle-up\"></i>");
+        more = false;
+      }else{
+        hide();
+      }
+    });
+  })
+
+  $(function () {
+    $(".like-give").click(function () {
+      $(this).toggleClass('give-like-click');
+    })
+  })
+
+  $(function () {
+    $(".collection-give").click(function () {
+      $(this).toggleClass('collection-give-click');
+    })
+  })
+
+</script>
+</html>

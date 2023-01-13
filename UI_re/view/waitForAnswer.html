@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShareLifeline</title>
+  <link rel="stylesheet" href="static/Question/banner.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/Question/style(LifeLine).css">
+  <link rel="stylesheet" href="static/Question/Question.css">
+  <link rel="stylesheet" href="static/WaitForAnswer/waitForAnswer.css">
+</head>
+<body>
+<div id="popLayer"></div>
+<div id="popBox">
+  <div class="query-title"></div>
+  <div class="query-close"><i class="fa-solid fa-x"></i></div>
+</div>
+<div class="loader-container">
+  <div class="loader">
+    <img src="static/Question/LifeLine.png" alt="Lifeline">
+    <div class="slide-box">
+      <div class="solid"></div>
+    </div>
+  </div>
+</div>
+<div class="banner">
+  <div class="logo"><img src="static/Question/logo.png" alt=""></div>
+  <div class="index"><a href="">Home</a></div>
+  <div class="index" id="Community"><a href="">Community</a></div>
+  <div class="index"><a href="">WaitForAnswer</a></div>
+  <div class="wrap">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+  <div class="query"><button type="button" onclick="query()">Query</button></div>
+</div>
+<div class="content-list">
+  <div class="content-item">
+    <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+    <div class="user-operation">
+      <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+      <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+      <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+    </div>
+  </div>
+  <div class="content-item">
+    <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+    <div class="user-operation">
+      <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+      <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+      <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+    </div>
+  </div>
+  <div class="content-item">
+    <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+    <div class="user-operation">
+      <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+      <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+      <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+    </div>
+  </div>
+  <div class="content-item">
+    <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+    <div class="user-operation">
+      <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+      <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+      <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+    </div>
+  </div>
+  <div class="content-item">
+    <div class="content-title"><a href="">Enhanced triclosan biodegradation by a biphasic bioreactor</a></div>
+    <div class="user-operation">
+      <div class="give-like"><i class="fa fa-heart like-give" aria-hidden="true"></i>  Like</div>
+      <div class="give-collection"><i class="fa fa-star collection-give"></i> Collection</div>
+      <div class="give-comment"><i class="fa fa-comments comment-give"></i> 301Comments</div>
+    </div>
+  </div>
+</div>
+<div class="create-article">
+  <div class="create-article-title"><i class="fa fa-paint-brush"></i><p>Create</p></div>
+  <div class="create-article-draft">Drafts</div>
+  <div class="create-choice">
+    <div class="create-query"><a href="/Query"><div class="circle-wrap-query"><i class="fa fa-edit"></i></div></a><div class="create-name">
+      Query</div></div>
+    <div class="create-query"><a href="/BlogWrite"><div class="circle-wrap-blog"><i class="fa fa-blog"></i></div></a><div class="create-name">
+      Blog</div></div>
+    <div class="create-query"><a href=""><div class="circle-wrap-science"><i class="fa fa-atom"></i></div></a><div class="create-name">Answer</div></div>
+  </div>
+  <div class="create-slogan"> Start Creating!</div>
+  <img src="static/Question/img.png" alt="" class="img-slogan">
+  <button class="start-creating"><i class="fa fa-plus"></i> <a href="/BlogWrite">Write Down Your Story</a></button>
+</div>
+<div class="user-recommendation">
+  <div class="user-recommendation-title"><i class="fa-solid fa-users"></i> <p> Patients Like ME</p></div>
+  <div class="user-recommendation-list">
+    <div class="user-recommendation-item">
+      <div class="user-recommendation-portal"><img src="https://pic3.zhimg.com/80/v2-798a1d572955f1164ee0c07e4f5fa0aa_720w.webp" alt=""></div>
+      <div class="user-recommendation-intro">
+        <div class="user-recommendation-name">Akuya</div>
+        <div class="user-recommendation-tag">Depression Bloger</div>
+      </div>
+      <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+    </div>
+    <div class="user-recommendation-item">
+      <div class="user-recommendation-portal"><img src="https://pic3.zhimg.com/80/v2-68c683fe8204dd7887991d8d5e909e12_720w.webp" alt=""></div>
+      <div class="user-recommendation-intro">
+        <div class="user-recommendation-name">Liya</div>
+        <div class="user-recommendation-tag">Heart professor</div>
+      </div>
+      <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+    </div>
+    <div class="user-recommendation-item">
+      <div class="user-recommendation-portal"><img src="https://pic1.zhimg.com/80/v2-b9252f4411ad9dcc3616bba99897a004_720w.webp" alt=""></div>
+      <div class="user-recommendation-intro">
+        <div class="user-recommendation-name">Diassy</div>
+        <div class="user-recommendation-tag">Love Singer</div>
+      </div>
+      <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+    </div>
+    <div class="user-recommendation-item">
+      <div class="user-recommendation-portal"><img src="https://pic2.zhimg.com/80/v2-da6a3d112b58c8247fd8c0f58c236871_720w.webp" alt=""></div>
+      <div class="user-recommendation-intro">
+        <div class="user-recommendation-name">LexSama</div>
+        <div class="user-recommendation-tag">Guest</div>
+      </div>
+      <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+    </div>
+    <div class="user-recommendation-item">
+      <div class="user-recommendation-portal"><img src="https://pic2.zhimg.com/80/v2-23049f9e8e01e1955cd5af5bc855b661_720w.webp" alt=""></div>
+      <div class="user-recommendation-intro">
+        <div class="user-recommendation-name">Segas</div>
+        <div class="user-recommendation-tag">Sleep sleep...</div>
+      </div>
+      <div class="user-recommendation-follow"><i class="fa-solid fa-plus"></i><p>Follow</p></div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script  src="static/Question/script(LifeLine).js"></script>
+<script  src="static/Question/more.js"></script>
+<script  src="static/Question/popLayer.js"></script>
+</html>

@@ -1,0 +1,56 @@
+.mail-textarea {
+  display: flex;
+  background-color: white;
+  padding: 30px 0;
+  border-top: 1px solid var(--border-color);
+  position: sticky;
+  bottom: 0;
+  justify-content: space-between;
+  /*margin-top: auto;*/
+  margin: 10px auto 15px;
+  left: 0;
+  overflow: hidden;
+  height: 100px;
+  flex-shrink: 0;
+  width: 900px;
+}
+.mail-textarea input {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  width: 80%;
+  padding: 0 30px;
+  color: var(--main-color);
+  border: 1px solid black;
+}
+.mail-textarea input::placeholder {
+  color: var(--main-light-color);
+}
+
+.textarea-icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.send {
+  position: relative;
+  padding: 30px;
+  background-color: #64b5f6;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  margin-left: -50px;
+  text-decoration: none;
+  border: none;
+}
+.send i {
+  color: black;
+  position: relative;
+  scale: 200%;
+  left: -8px;
+  top: -8px;
+}
+.send:hover{
+  background-color: #1E90FF;
+}
